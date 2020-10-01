@@ -24,7 +24,6 @@ function init(){
     for(let i=0;i<20;i++){
         snake.splice(0,0,new  SetPoint(start_x+i,start_y));
     }
-    console.log(snake)
 }
 function randTarget(){
     let rand_x= Math.floor(Math.random() * Math.floor(20));
@@ -52,7 +51,7 @@ function main(){
                             if(direction==="bas"){
 
                                 vertical(0,1)
-                                console.log("haut")
+
                             }
                             else{
                                 vertical(1,0)
@@ -62,7 +61,7 @@ function main(){
                 case 115:
                     if(direction==="haut"){
                         vertical(1,0)
-                        console.log("bas")
+
                     }else{
                         vertical(0,1)
                     }
@@ -71,7 +70,7 @@ function main(){
                 case 113:
                             if(direction==="droite"){
                                 horizontal(0,1)
-                                console.log("gauche")
+
                             }else{
                                 horizontal(1,0)
                             }
@@ -80,7 +79,7 @@ function main(){
                     case 100:
                             if(direction=== "gauche"){
                                 horizontal(1,0)
-                                console.log("droite")
+
                             }else{
                                 horizontal(0,1)
                             }
@@ -117,7 +116,7 @@ function main(){
                 ctx.font = "30px Arial";
                 ctx.fillText("Game Over !!!", 200, 200);
                 clearInterval(terminator)
-                console.log("collision")
+
             }
             occurence=0;
 
@@ -141,7 +140,7 @@ function refreshScore(){
 function zx(e){
     var charCode = (typeof e.which == "number") ? e.which : e.keyCode
         code=charCode
-    console.log(charCode);
+
 }
 
 function display() {
